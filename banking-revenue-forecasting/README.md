@@ -15,11 +15,10 @@ The result is an end-to-end, decision-ready analytics pipeline suitable for exec
 ---
 
 ## 🧩 Project Architecture
-
+```
 banking-revenue-forecasting/
-│
 ├── data/
-│ ├── clv_data.csv
+│ ├── banking_revenue_data.csv
 │ └── revenue_forecast_by_segment.csv
 │
 ├── notebooks/
@@ -29,7 +28,7 @@ banking-revenue-forecasting/
 │ └── 04_business_strategy.ipynb
 │
 └── README.md
----
+```
 
 ## 🧪 Analytical Pipeline
 

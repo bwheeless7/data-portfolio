@@ -1,20 +1,29 @@
-# 📈 Banking Revenue Forecasting & Customer Lifetime Value Optimization
+# Banking Revenue Forecasting & Customer Lifetime Value Optimization
 
-## Executive Summary
+## Overview
 
-This project builds a comprehensive analytics framework for understanding customer behavior, maximizing customer lifetime value (CLV), and forecasting future revenue growth in a retail banking environment.
+This project builds a data-driven framework for understanding customer value and designing targeted growth strategies in a financial services environment.
 
-The system integrates **customer analytics, segmentation, predictive modeling, and business strategy** to answer three core business questions:
-
-1. **Which customers are most valuable?**
-2. **How should the bank prioritize growth and retention efforts?**
-3. **What does future revenue look like by customer segment?**
-
-The result is an end-to-end, decision-ready analytics pipeline suitable for executive planning and strategic investment.
+It focuses on estimating Customer Lifetime Value (CLV), segmenting customers based on long-term profitability, and translating analytical insights into concrete business actions that maximize revenue and retention.
 
 ---
 
-## 🧩 Project Architecture
+## Business Problem
+
+Financial institutions need to grow profitably, not just acquire customers.
+
+The challenge is to:
+- Identify the most valuable customers  
+- Understand what drives long-term profitability  
+- Allocate resources toward segments with the highest growth potential  
+
+This project provides a structured approach for making those decisions using data.
+
+---
+
+## Project Architecture
+
+
 ```
 banking-revenue-forecasting/
 ├── data/

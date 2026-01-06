@@ -50,7 +50,7 @@ banking-revenue-forecasting/
 
 ### 2. Revenue Forecasting & Growth Modeling
 - Identified key revenue drivers
-- Analyzed customer engagement and monetization patterns
+- Assessed customer engagement and monetization stability within the dataset
 
 ### 3. Customer Lifetime Value Modeling
 - Estimated CLV using behavioral and financial features

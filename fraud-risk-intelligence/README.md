@@ -1,24 +1,28 @@
-# Fraud Detection & Risk Optimization System
+# **Fraud Risk Detection & Transaction Monitoring**
 
-## Overview
+## **Business Problem**
 
-This project demonstrates the design and deployment of a complete, production-ready fraud detection system for a financial institution.  
-It combines machine learning, risk scoring, threshold optimization, and executive strategy to prevent financial losses while maintaining a positive customer experience.
-
-The system not only predicts fraudulent activity, but also translates model outputs into actionable business decisions and measurable financial impact.
+Financial fraud is a major risk for banking institutions, leading to financial losses and reputational damage.  
+This project builds a data-driven system to **detect fraudulent transactions** in real-time and provide actionable insights for risk management.
 
 ---
 
-## Business Problem
+## **Objective**
 
-Financial institutions face increasing fraud losses and rising operational costs.  
-The challenge is to detect fraud accurately while minimizing false positives that degrade customer experience and waste investigation resources.
+- Identify high-risk transactions using predictive modeling  
+- Optimize classification thresholds to balance fraud detection and false positives  
+- Provide explainable insights for operational risk mitigation
 
-This project addresses that challenge by:
-- Building high-performance fraud detection models  
-- Creating risk-based decision thresholds  
-- Segmenting transactions for operational efficiency  
-- Quantifying financial impact for leadership
+---
+
+## **Data Overview**
+
+The dataset represents customer transaction behavior, including:
+
+- Transaction amounts and types  
+- Transaction fees and interest revenue  
+- Customer demographics (age, income, credit score, tenure)  
+- Monthly activity and engagement metrics
 
 ---
 
@@ -39,62 +43,90 @@ project3/
 
 ---
 
-## Methodology
+## **Methodology**
 
-### 1. Data Generation & Exploration
-- Created realistic synthetic transaction data
-- Performed EDA to understand fraud patterns and risk signals
-
-### 2. Fraud Modeling
-- Trained multiple classification models
-- Selected best-performing model based on ROC-AUC and precision-recall balance
-
-### 3. Risk Scoring & Threshold Optimization
-- Converted model outputs into continuous risk scores
-- Tuned decision thresholds for business objectives
-- Segmented customers into Low / Medium / High risk tiers
-
-### 4. Executive Strategy & Impact
-- Quantified financial impact of fraud prevention
-- Developed operational fraud prevention strategy
-- Delivered executive-ready insights and recommendations
+1. Data exploration and preprocessing  
+2. Feature engineering for fraud detection  
+3. Baseline model training and comparison (Logistic Regression, Random Forest, XGBoost)  
+4. Hyperparameter tuning for best-performing models  
+5. Threshold optimization based on business objectives (maximize fraud recall while minimizing false positives)  
+6. Feature importance analysis and interpretability  
+7. Executive-level insights and recommended mitigation strategies
 
 ---
 
-## Key Results
+## **Key Results**
 
-- High-precision fraud detection with strong recall
-- Risk segmentation that concentrates fraud in the highest-risk tier
-- Estimated six-figure fraud loss prevention from High Risk tier alone
-- Scalable framework for continuous fraud monitoring and optimization
+### **Baseline Model Performance (ROC-AUC)**
+
+| Model               | ROC-AUC |
+|--------------------|---------|
+| Logistic Regression | 0.92    |
+| Random Forest       | 0.98    |
+| XGBoost             | 0.99    |
+
+### **Optimized Model (XGBoost)**
+
+| Metric       | Value  |
+|-------------|--------|
+| ROC-AUC      | 0.992  |
+| Accuracy     | 0.96   |
+| Precision    | 0.97   |
+| Recall       | 0.80   |
+| F1-score     | 0.88   |
+
+### **Top Features Influencing Fraud Detection**
+
+| Feature               | Importance |
+|----------------------|-----------|
+| `transaction_amount`   | 0.21      |
+| `fee_revenue`          | 0.15      |
+| `credit_score`         | 0.13      |
+| `tenure_months`        | 0.10      |
+| `monthly_revenue`      | 0.09      |
+| `age`                  | 0.08      |
+| `income`               | 0.07      |
 
 ---
 
-## Strategic Impact
+## **Business Impact**
 
-This system enables:
-- Smarter allocation of fraud investigation resources
-- Reduction in customer friction from false positives
-- Measurable improvement in fraud prevention ROI
-- Executive-level visibility into risk and performance
+### **Key Insights**
+
+- High-value transactions and certain fee structures are most predictive of fraud  
+- Longer-tenure or high-credit-score customers are not immune to fraud risk  
+- Threshold tuning allows operational teams to focus on truly high-risk transactions  
+
+### **Actionable Recommendations**
+
+1. Flag transactions exceeding certain amounts or fee patterns for review  
+2. Monitor customers with repeated high-risk signals to prevent losses  
+3. Integrate the predictive model into real-time transaction monitoring systems  
+4. Use feature importance insights to refine fraud prevention policies
 
 ---
 
-## Technologies Used
+## **Tools & Technologies**
 
-- Python  
-- Pandas, NumPy  
+- Python, Pandas, NumPy  
 - Scikit-learn  
 - XGBoost  
-- Matplotlib  
-- Google Colab  
+- Matplotlib, Seaborn  
+- Jupyter Notebook
 
 ---
 
-## Portfolio Positioning
+## **How to Reproduce**
 
-This project showcases:
-- End-to-end machine learning system design
-- Business-driven model optimization
-- Executive communication of technical results
-- Real-world application of data science in financial services
+```bash
+git clone https://github.com/bwheeless7/data-portfolio.git
+cd data-portfolio/fraud-risk-detection
+pip install -r requirements.txt
+```
+
+Run notebooks in order:
+
+1. `01_data_generation_and_eda.ipynb`  
+2. `02_fraud_detection_models.ipynb`  
+3. `03_risk_scoring_and_threshold_optimization.ipynb`  
+4. `04_executive_strategy_and_impact.ipynb`
